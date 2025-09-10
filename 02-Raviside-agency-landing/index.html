@@ -1,117 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RaviSide - Creative Agency</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </head>
-
 <body>
-    <header class="main">
-        <nav class="navigation">
-            <div class="nav1">
-                <h1 class="logo_ravi">RAVISIDE</h1>
-            </div>
-            <div class="nav2">
-                <ul class="under-list">
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>projects</li>
-                    <li class="contect">contect</li>
-                    <img class="close_button" src="./assets/images/close-button.svg" alt="">
-                </ul>
-            </div>
-            <div class="nav3">
-                <img class="icon_hamburger" src="./assets/images/icon-hamburger.svg" alt="">
-            </div>
-        </nav>
-        <div class="weare">
-            <h1 class="heading">Weare creatives</h1>
-            <div class="home-pic">
-                <img src="./assets/images/icon-arrow-down.svg" alt="">
-            </div>
-        </div>
-    </header>
-    <section class="page2">
-            <div class="part1-text">
-                <h2>Transform your brand</h2>
-                <p>We are a full-service creative agency specializing in helping brands grow fast. engage your clients
-                    through compelling visuals that do most of the marketing for you.</p>
-                <button>learn more</button>
-            </div>
-            <div class="part1-pic">
-                <img src="./assets/images/desktop/image-transform.jpg" alt="">
-            </div>
-            <div class="part2-pic">
-                <img src="./assets/images/desktop/image-stand-out.jpg" alt="">
-            </div>
-            <div class="part2-text">
-                <h2>Stand out to the right audience </h2>
-                <p>using a collaborative of designers, researchers ,photographers,videographers, and copywriters,well
-                    build and extend your brand in digital places</p>
-                <button>learn more</button>
-            </div>
-    </section>
-    <section class="page3">
-            <div class="first-img">
-                <img src="./assets/images/desktop/image-graphic-design.jpg" alt="">
-            </div>
-            <div class="second-ing">
-                <img src="./assets/images/desktop/image-photography.jpg" alt="">
-            </div>
-    </section>
-    <div class="page2_part2">
-            <h2 class="client">client testimonials</h2>
-            <div class="custmers">
-                <div class="box">
-                    <img src="./assets/images/image-emily.jpg" alt="">
-                    <p>We put our trust in sunnyside and they delivered, making sure our needs were met and deadlines
-                        were always hit.</p>
-                    <div class="sign">
-                        <h2>Emily R.</h2>
-                        <p class="sign_para">Marketing Director</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/images/image-jennie.jpg" alt="">
-                    <p>incredible end result Our sales increased over 400% when we worked with sunnyside. highly
-                        recommended</p>
-                    <div class="sign">
-                        <h2>Emily F.</h2>
-                        <p class="sign_para">Marketing Director</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="./assets/images/image-thomas.jpg" alt="">
-                    <p>Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a
-                        satisfying and enjoyable experience.</p>
-                    <div class="sign">
-                        <h2>thomas S.</h2>
-                        <p class="sign_para">Chief operating officer</p>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    
-    <footer class="page4">
-        <div class="discription">
-            <h2 class="ravi">RAVISIDE</h2>
-            <ul class="end_underlist">
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <section class="hero">
+        <nav class="navbar">
+            <div class="logo">RAVISIDE</div>
+                <ul class="nav-menu" id="navMenu">
                 <li>About</li>
                 <li>Services</li>
-                <li>projects</li>
+                <li>Projects</li>
+                <li class="contact-btn">Contact</li>
             </ul>
-            <ul class="end_underlist_icons">
-                <li><img src="./assets//images/icon-facebook.svg" alt=""></li>
-                <li><img src="./assets/images/icon-instagram.svg" alt=""></li>
-                <li><img src="./assets/images/icon-twitter.svg" alt=""></li>
-                <li><img src="./assets/images/icon-pinterest.svg" alt=""></li>
-            </ul>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </nav>
+        <div class="hero-content">
+            <h1 class="hero-title">We Are Creatives</h1>
+            <div class="scroll-arrow">↓</div>
         </div>
-    </footer>
+    </section>
+    <section class="services">
+        <div class="service-text">
+            <h2>Transform your brand</h2>
+            <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            <button class="learn-more-btn">Learn More</button>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="Transform your brand">
+        </div>
+            <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=800" alt="Stand out design">
+        </div>
+        <div class="service-text pink">
+            <h2>Stand out to the right audience</h2>
+            <p>Using a collaborative team of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</p>
+            <button class="learn-more-btn">Learn More</button>
+        </div>
+    </section>
+    <section class="portfolio">
+        <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800" alt="Graphic Design">
+            <div class="portfolio-overlay">
+                <h3>Graphic Design</h3>
+                <p>Great design makes you memorable. Art is what makes you money.</p>
+            </div>
+        </div>
+            <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=800" alt="Photography">
+            <div class="portfolio-overlay">
+                <h3>Photography</h3>
+                <p>Increase your credibility by getting stunning, professional photos.</p>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <h2>Client Testimonials</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <img src="https://imgs.search.brave.com/H8o2eQ8rABJJO2dy3EYOr7kUbVYf-W0UcSThaADJ69g/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9jbG9z/ZS11cC1ub3JtYWwt/Z2lybC1iZWF1dGlm/dWwteW91bmctd29t/YW4tc3R1ZGlvLWxv/b2tpbmctY2FtZXJh/LTMwNzYxNjQ2Lmpw/Zw" alt="Emily R.">
+                <p>"We put our trust in RaviSide and they delivered, making sure our needs were met and deadlines were always hit."</p>
+                <div class="testimonial-author">
+                    <h3>Emily R.</h3>
+                    <span>Marketing Director</span>
+                </div>
+            </div>
+                <div class="testimonial-card">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face" alt="Jennifer F.">
+                <p>"Incredible end result! Our sales increased over 400% when we worked with RaviSide. Highly recommended!"</p>
+                <div class="testimonial-author">
+                    <h3>Jennifer F.</h3>
+                    <span>Business Owner</span>
+                </div>
+            </div>
+                <div class="testimonial-card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Thomas S.">
+                <p>"RaviSide's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience."</p>
+                <div class="testimonial-author">
+                    <h3>Thomas S.</h3>
+                    <span>Chief Operating Officer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <h2>RAVISIDE</h2>
+            <ul class="footer-links">
+            <li>About</li>
+            <li>Services</li>
+            <li>Projects</li>
+        </ul>
+        <ul class="social-icons">
+            <li>📘</li> 
+            <li>📷</li> 
+            <li>🐦</li> 
+            <li>📌</li> 
+        </ul>
+    </footer>    
 </body>
-
 </html>
