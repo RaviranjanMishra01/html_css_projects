@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.main1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    min-height: 80%;
+    width: 75%;
+    background-color: #F3F4F6;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 50%);
+    border-radius: 25px;
+    background-image: url(./our-team-layout-master/resources/Background_decor@2x.png);
+    background-repeat: no-repeat;
+    overflow: hidden;    
+}
+.box{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+    }
+    .human{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 45%;
+    background-image: url(./assets/resources/Gradient@2x.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2vh;
+    h3{
+        width: 100%;
+        margin-top: 50px;
+        padding-left:1vw;
+        color: #fff;
+    }
+    p{
+        padding-left:1vw;
+        color: #ffffffba;
+        font-weight: 700;
+    }
+    
+}
+}
+
+.box1 {
+    grid-column: span 2;
+    padding: 3vh 2.5vw;   
+}
+.span{
+    color: #485BB6;
+    font-size: 1.5rem;
+}
+.brain{
+    padding-top: 1rem;
+    font-size: 2.2rem;
+    font-family:'Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.paragraph{
+    font-size: 0.9rem;
+    font-family:'Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 1.5rem;
+    font-weight: 600;
+    opacity: 0.6;
+}
+.box2 {
+    background-color: #C1B6F8;
+    
+}
+
+.box3 {
+    background-color: #EDADD2;
+    overflow: hidden;
+}
+
+.box4 {
+    padding: 0px 2.5vw;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    padding-bottom: 3.5vh;
+    text-transform: capitalize;
+    font-weight: 700;
+    opacity: 0.7;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    img{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.box5 {
+    background-color: #9CC4F8;
+    
+}
+
+.box6 {
+    background-color: #F8D8B1;
+    
+}
+
+.box7 {
+    background-color: #86E7D4;
+}
+
+
+.imgs{
+    height: 100%;
+    width: 100%;
+    img{
+         height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width:1024px) {
+    .container {
+        min-height: 90%;
+        width: 80%;
+        grid-template-columns: repeat(3,33.33%);
+        grid-template-rows: repeat(3, 33.33%);
+    }
+    .box{
+        .human{
+            height: 60%;
+            padding: 0px 1vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 2.5vh;
+        }
+    }
+    .box1 {
+        grid-column: span 4;
+        padding: 3vh 2.5vw; 
+        .span{
+            font-size: 1.3rem;
+        }
+        .paragraph{
+            width: 60%;
+        }
+    }
+    .box5{
+        grid-column:2/1;
+    }
+}
+
+@media (max-width: 480px) {
+  .main1 {
+    width: 100%;
+    min-height: 100%;
+    display: block;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
+    border-radius: 0;
+    background-image: url(./our-team-layout-master/resources/Background_decor.svg);
+    overflow: hidden;
+  }
+
+  .box {
+    width: 100%;
+    position: relative;
+    display: block;
+  }
+  .box1 {
+    padding: 20px;
+  }
+  .box1 .span {
+    font-size: 1.4rem;
+    color: #485BB6;
+  }
+  .box1 .brain {
+    font-size: 2.5rem;
+    margin-top: 8px;
+  }
+  .box1 .paragraph {
+    font-size:0.9rem;
+    width: 100%;
+    margin-top: 10px;
+    opacity: 0.7;
+  }
+
+  .box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .box .human {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(./assets/resources/Gradient@2x.png);
+    background-size: cover;
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .box .human h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0;
+  }
+  .box .human p {
+    font-size: 0.8rem;
+    color: #ffffffcc;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .box4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #F3F4F6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.7;
+  }
+  .box4 img {
+    height: 14px;
+    width: 14px;
+  }
+} 
