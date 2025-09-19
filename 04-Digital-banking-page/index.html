@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="main">
         <nav class="navigations">
             <div class="nav1">
                 <img src="./assets/logo-dark.svg" alt="" class="dark-logo">
-                <img src="./assets/logo-light.svg" alt="" class="light-logo">
             </div>
             <div class="nav2">
                 <ul>
@@ -26,8 +25,12 @@
             <div class="nav3">
                 <button class="request">Request invite</button>
             </div>
+            <div class="nav4">
+                <img class="hamburger-btn" src="./assets/icon-hamburger.svg" alt="">
+                <img  class="close-btn" src="./assets/icon-close.svg" alt="">
+            </div>
         </nav>
-        <div class="content">
+        <div class="content blur">
             <div class="left-side-text">
                 <h1 class="next-generation">
                     Next generation digital banking
@@ -39,9 +42,10 @@
             </div>
             <div class="rightsideimgs">
                 <img class="phones" src="./assets/image-mockups.png" alt="image-mockups">
+                <img src="./assets/" alt="">
             </div>
         </div>
-    </header>
+    </header> 
     <section class="page2">
         <div class="digitalbank">
             <h2 class="digitalbank-text">why choose Digitalbank ?</h2>
@@ -75,35 +79,50 @@
             <h2>Latest Articles</h2>
             <div class="latest">
                 <div class="imgs">
-                    <img src="" alt="">
+                    <div class="articles_imgs">
+                        <img src="./assets/image-currency.jpg" alt="">
+                    </div>
                     <span>By claire robinson</span>
                     <h3>Receive money in any currency with no fees</h3>
                     <p>The Worls is getting smaller and we're becoming more mobile. So why should you be forced to only Receive money in a single ...</p>
                 </div>
                 <div class="imgs">
-                    <img src="" alt="">
+                    <div class="articles_imgs">
+                        <img src="./assets/image-restaurant.jpg" alt="">
+                    </div>
                     <span>By wilson Hutton</span>
                     <h3>Treat yourself wiyhout Worrking about money</h3>
                     <p>Our simple budgeting feature allows you to separete out your spending and set realistic limits each month. That means you ...</p>
                 </div>
                 <div class="imgs">
-                    <img src="" alt="">
+               <div class="articles_imgs">
+                     <img src="./assets/image-plane.jpg" alt="">
+               </div>
                     <span>By Wilson Hutton</span>
                     <h3>Take your Digitalbank card Whwrever you go</h3>
                     <p>We Want you to enjoy your travels. This is Why we don't charge any fees on purchases while you're abroad. We'll even ...</p>
                 </div>
                 <div class="imgs">
-                    <img src="" alt="">
+                    <div class="articles_imgs">
+                        <img src="./assets/image-confetti.jpg" alt="">
+                    </div>
                     <span>By Claire Robinson</span>
                     <h3>Our invite-Only Beta accounts are now live!</h3>
                     <p>After a lot of hard work by the whole tham, We're excited to launch our closed beta it's easy to request an invite through...</p>
                 </div>
             </div>
         </div>
-        <footer class="footer">
+    </section>
+    <footer class="footer">
             <div class="logos">
                 <img src="./assets/logo-dark.svg" alt="" class="dark-logo">
-                <img src="./assets/logo-light.svg" alt="" class="light-logo">
+                <ul>
+                    <li><img src="./assets/icon-facebook.svg" alt=""></li>
+                    <li><img src="./assets/icon-youtube.svg" alt=""></li>
+                    <li><img src="./assets/icon-twitter.svg" alt=""></li>
+                    <li><img src="./assets/icon-pinterest.svg" alt=""></li>
+                    <li><img src="./assets/icon-instagram.svg" alt=""></li>
+                </ul>
             </div>
             <div class="aboutme">
                 <ul>
@@ -117,10 +136,10 @@
                     <li>privacy policy</li>
                 </ul>
             </div>
-            <div class="request">
-                <button class="request">request-invite</button>
+            <div id="request">
+                <button class="request2">Request-invite</button>
+                <p>made with ravi ❤️ :) ❤️</p>
             </div>
         </footer>
-    </section>
 </body>
 </html>
