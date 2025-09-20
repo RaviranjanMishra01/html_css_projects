@@ -18,6 +18,7 @@
                         <li class="borders">Shop</li>
                         <li class="borders">About</li>
                         <li class="borders">Contact</li>
+                        <li><img class="hamburger" src="./assets/images/icon-hamburger.svg" alt=""></li>
                     </ul>
                 </nav>
                 <div class="imgs">
@@ -25,8 +26,8 @@
                 </div>
             </div>
             <div class="img2">
-                <div class="texts">
-                    <h2 class="change-text">Discover innovative ways to decorate</h2>
+                <div class="texts" id="texts2">
+                    <h2 class="change-text" id="change-text1">Discover innovative ways to decorate</h2>
                     <p class="long-text" class="change-text2">We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
                     <p class="shop">Shop now <img src="./assets/images/icon-arrow.svg" alt="Arrow"></p>
                 </div>
@@ -54,9 +55,6 @@
         </div>
     </header>
     <script src="./script.js">
-        document.querySelector('.hamburger').addEventListener('click', () => {
-            document.querySelector('.navigation').classList.toggle('active');
-        });
     </script>
 </body>
 </html>
