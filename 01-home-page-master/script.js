@@ -12,7 +12,7 @@ right.addEventListener("click", () => {
     "src",
     `./assets/images/desktop-image-hero-${click}.jpg`
   );
-  change1.textContent = "Your challenge is to build out this e-commerce homepage and get it looking as close to the design as possible."
+  change1.textContent = "Your challenge is to build out this e-commerce homepage and get it ."
 });
 
 left.addEventListener("click", () => {
@@ -21,7 +21,7 @@ left.addEventListener("click", () => {
     "src",
     `./assets/images/desktop-image-hero-${click}.jpg`
   );
-  change1.textContent = "ravi is here"
+  change1.textContent = "Discover innovative ways to decorate"
 });
 
 
