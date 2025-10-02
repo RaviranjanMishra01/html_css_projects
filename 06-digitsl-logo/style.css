@@ -1,211 +1,418 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* use to desktop
-.alata-regular {
-  font-family: "Alata", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-    }
- */
-
-/*
- .montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
- */
 
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
- html,body{
-    height: 100%;
-    width: 100%;
- }
- .main{
-    width: 100%;
-    height: 90%;
-    margin-bottom: 10%;
-    padding: 5vh 9vw;
-    background-image: url(./assets/desktop/image-hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
- }
- .nav3{
-    display: none;
- }
- .navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
- }
- .logo{
-    color: #fff;
-    text-decoration: none;
-    font-family: "Alata", sans-serif;
-    font-weight: 500;
-    font-size: 1.5rem;
- }
- .underlist{
-    display: flex;
-    list-style: none;
-    gap: 1.4rem;
-    li a{
-        color: #fff;
-        font-family:"Montserrat";
-        text-decoration: none;
-        text-transform: capitalize;
-    }
- }
+html,
+body {
+   height: 100%;
+   width: 100%;
+   overflow-x: hidden;
+}
 
- .immersive{
-    margin-top:20vh;
-    border: 2px solid #ffffff9c;
-    width: 50%;
- }
- .heading{
-   font-family:"Montserrat";
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #fff;
-    padding: 3vh 2.5vw;
-    opacity: 0.7;
-    /* font-size: 4rem; */
- }
- .page2{
-    height: 75%;
-    width: 100%;
-    padding: 5vh 9vw;
-    display: flex;
-    position: relative;
- }
-.intractive{
-   width: 45%;
-   img{
-      object-fit: contain;
-   }
+body {
+   font-family: "Montserrat", sans-serif;
 }
-.text{
-   position: absolute;
-   bottom: 5.5%;
-   right: 0;
-   width: 55%;
-   background-color: #fff;
-   padding: 4.5vh 8vw;
-   padding-bottom: 15px;
-}
-.headin-text{
-   font-family:"Alata", sans-serif;
-   font-weight: 100;
-   font-size: 3.5vw;
-   text-transform: uppercase;
-}
-.Founded{
-   opacity: 0.6;
-   padding-top: 6.2vh;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.buttom-side{
-   height: 10%;
+
+/* Header Section */
+.main {
+   width: 100%;
+   height: 90vh;
+   margin-bottom: 10%;
    padding: 5vh 9vw;
+   background-image: url('./assets/desktop/image-hero.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+}
+
+.main::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.navigation {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   z-index: 2;
+}
+
+.logo {
+   color: #fff;
+   text-decoration: none;
+   font-family: "Alata", sans-serif;
+   font-weight: 500;
+   font-size: 1.5rem;
+   z-index: 3;
+}
+
+.underlist {
+   display: flex;
+   list-style: none;
+   gap: 1.4rem;
+}
+
+.underlist li a {
+   color: #fff;
+   font-family: "Montserrat";
+   text-decoration: none;
+   text-transform: capitalize;
+   position: relative;
+}
+
+.underlist li a::after {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 2px;
+   bottom: -5px;
+   left: 50%;
+   background-color: #fff;
+   transition: all 0.3s ease;
+   transform: translateX(-50%);
+}
+
+.underlist li a:hover::after {
+   width: 50%;
+}
+
+.nav3 {
+   display: none;
+   cursor: pointer;
+   color: white;
+   font-size: 1.5rem;
+}
+
+.fa-xmark {
+   display: none;
+}
+
+.immersive {
+   margin-top: 20vh;
+   border: 2px solid #ffffff9c;
+   width: 50%;
+   position: relative;
+   z-index: 2;
+}
+
+.heading {
+   font-family: "Montserrat";
+   font-weight: 400;
+   text-transform: uppercase;
+   color: #fff;
+   padding: 3vh 2.5vw;
+   opacity: 0.9;
+   font-size: clamp(2rem, 4vw, 4rem);
+}
+
+/* Page 2 Section */
+.page2 {
+   width: 100%;
+   padding: 10vh 9vw;
+   display: flex;
+   position: relative;
+   flex-wrap: wrap;
+}
+
+.intractive {
+   width: 60%;
+}
+
+.intractive img {
+   width: 100%;
+   height: auto;
+   display: block;
+}
+
+.text {
+   width: 50%;
+   background-color: #fff;
+   padding: 4.5vh 4vw;
+   position: absolute;
+   bottom: 0;
+   right: 9vw;
+}
+
+.headin-text {
+   font-family: "Alata", sans-serif;
+   font-weight: 100;
+   font-size: clamp(1.5rem, 3vw, 3.5rem);
+   text-transform: uppercase;
+   margin-bottom: 1rem;
+}
+
+.Founded {
+   opacity: 0.6;
+   line-height: 1.6;
+}
+
+.buttom-side {
+   width: 100%;
+   padding: 0 9vw 5vh;
    display: flex;
    justify-content: space-between;
+   align-items: center;
 }
-.our-creation{
-  font-family: "Alata", sans-serif;
+
+.our-creation {
+   font-family: "Alata", sans-serif;
    font-weight: 100;
    text-transform: uppercase;
-   font-size: 2.2rem;
+   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
    opacity: 0.8;
-   margin-bottom: 2vh;
 }
-.see-all{
+
+.see-all {
    height: 35px;
-   width: 10%;
+   width: 150px;
    text-transform: uppercase;
    background-color: #000;
    color: #fff;
-   
+   border: 1px solid #000;
+   cursor: pointer;
+   transition: all 0.3s ease;
 }
-.imgs-grid{
+
+.see-all:hover {
+   background-color: #fff;
+   color: #000;
+}
+
+.imgs-grid {
    width: 100%;
-   padding:5vh 9vw ;
-   overflow: hidden;
+   padding: 0 9vw 10vh;
    display: grid;
-   grid-template-rows: repeat(2,2fr);
-   grid-template-columns: repeat(4,1fr);
-   gap:15px 15px; 
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
 }
-.pictures{
+
+.pictures {
    width: 100%;
    height: 100%;
    position: relative;
-   img{
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-   }
-   p{
-      position: absolute;
-      color: #fff;
-      text-transform: uppercase;
-      bottom: 25px;
-      padding: 0px 3.5vw;
-      font-size: 2rem;
-      font-family: monospace;
-      width: 90%;
-      opacity: 0.7;
-   }
+   cursor: pointer;
+   overflow: hidden;
 }
-.end-footer{
-   padding: 0px 9vw;
+
+.pictures img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.5s ease;
+}
+
+.pictures:hover img {
+   transform: scale(1.05);
+}
+
+.pictures p {
+   position: absolute;
+   color: #fff;
+   text-transform: uppercase;
+   bottom: 25px;
+   left: 25px;
+   font-size: clamp(1rem, 2vw, 2rem);
+   font-family: "Alata", sans-serif;
+   width: 70%;
+   opacity: 0.9;
+   z-index: 2;
+}
+
+.pictures::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+   z-index: 1;
+}
+
+/* Footer */
+.end-footer {
+   padding: 5vh 9vw;
    background-color: #000;
    display: flex;
    justify-content: space-between;
+   align-items: center;
 }
-.info{
+
+.info {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.info h3 {
+   color: #fff;
+   font-family: "Alata", sans-serif;
+   font-size: 1.5rem;
+}
+
+.info .underlist {
    display: flex;
    gap: 15px;
-   flex-direction: column;
+}
+
+.icons ul {
+   display: flex;
+   gap: 15px;
+   list-style: none;
+}
+
+.icons ul li {
+   cursor: pointer;
+}
+
+.icons i {
+   color: white;
+   font-size: 1.2rem;
+   transition: all 0.3s ease;
+}
+
+.icons i:hover {
+   color: #ccc;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
    background-color: #000;
-   h3{
-      padding-top: 3ch;
-      color: #fff;
-   }
-   padding-bottom: 25px;
-}
-.icons{
-   ul{
-      padding-top: 3ch;
-      display: flex;
-      gap: 10px;
-      list-style: none;
-      img{
-         height: 20px;
-      }
-   }
+   z-index: 10;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   padding-left: 9vw;
+   transform: translateX(-100%);
+   transition: transform 0.5s ease;
 }
 
+.mobile-menu.active {
+   transform: translateX(0);
+}
 
-@media (min-width:1285px) {
-   .immersive{
-    margin-top:20vh;
-    border: 2px solid #ffffff9c;
-    width: 50%;
+.mobile-menu .underlist {
+   flex-direction: column;
+   gap: 20px;
+}
+
+.mobile-menu .underlist li a {
+   font-size: 1.5rem;
+   text-transform: uppercase;
+   font-family: "Josefin Sans", sans-serif;
+}
+
+@media (max-width: 1024px) {
+   .imgs-grid {
+      grid-template-columns: repeat(2, 1fr);
    }
+
    .text {
-    position: absolute;
-    bottom: 5.5%;
-    right: 0;
-    width: 50%;
-    background-color: #fff;
-    padding: 4.5vh 3vw;
-    padding-bottom: 15px;
+      position: static;
+      width: 100%;
+      margin-top: 30px;
+      padding: 0;
+   }
+
+   .intractive {
+      width: 100%;
+   }
+
+   .page2 {
+      flex-direction: column;
+   }
+}
+
+@media (max-width: 768px) {
+   .main {
+      padding: 5vh 5vw;
+      height: 80vh;
+   }
+
+   .nav2 {
+      display: none;
+   }
+
+   .nav3 {
+      display: block;
+      z-index: 11;
+   }
+
+   .immersive {
+      width: 100%;
+      margin-top: 15vh;
+   }
+
+   .page2,
+   .buttom-side,
+   .imgs-grid,
+   .end-footer {
+      padding-left: 5vw;
+      padding-right: 5vw;
+   }
+
+   .buttom-side {
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+   }
+
+   .see-all {
+      align-self: flex-start;
+   }
+
+   .end-footer {
+      flex-direction: column;
+      gap: 30px;
+      align-items: flex-start;
+   }
+
+   .info .underlist {
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   .icons ul {
+      align-self: flex-start;
+   }
+}
+
+@media (max-width: 480px) {
+   .imgs-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .pictures {
+      height: 150px;
+   }
+
+   .heading {
+      padding: 2vh 4vw;
+   }
+
+   .mobile-menu .underlist li a {
+      font-size: 1.2rem;
+   }
+}
+
+@media (min-width: 1285px) {
+   .text {
+      width: 50%;
+      padding: 4.5vh 3vw;
    }
 }
