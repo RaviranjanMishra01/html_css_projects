@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>JavaScript Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+        <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
+        <a class="nav-link" href="#Hello_world">Hello world</a>
+        <a class="nav-link" href="#Variables">Variables</a>
+        <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+        <a class="nav-link" href="#Variable_scope">Variable scope</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+            <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements.</p>
+            <code>console.log('Hello World');</code>
+            <p>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM).</p>
+            <ul>
+                <li>Variables</li>
+                <li>Functions</li>
+                <li>Control Flow</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="What_you_should_already_know">
+            <header>What you should already know</header>
+            <p>This guide assumes you have the following basic background:</p>
+            <p>A general understanding of the Internet and the World Wide Web (WWW).</p>
+            <code>// This is a single line comment</code>
+            <ul>
+                <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                <li>Some programming experience.</li>
+            </ul>
+            <p>If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</p>
+        </section>
+
+        <section class="main-section" id="JavaScript_and_Java">
+            <header>JavaScript and Java</header>
+            <p>JavaScript and Java are similar in some ways but fundamentally different in others.</p>
+            <p>The JavaScript language resembles Java but does not have Java's static typing and strong type checking.</p>
+            <code>let x = 5; let y = 6; let z = x + y;</code>
+            <p>JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+        </section>
+
+        <section class="main-section" id="Hello_world">
+            <header>Hello world</header>
+            <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+            <code>function greetMe(yourName) { alert("Hello " + yourName); }</code>
+            <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
+            <ul>
+                <li>Open your browser's developer tools</li>
+                <li>Navigate to the console tab</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>You use variables as symbolic names for values in your application.</p>
+            <p>Variable names, called identifiers, conform to certain rules.</p>
+            <code>var x = 42;</code>
+            <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($).</p>
+        </section>
+
+        <section class="main-section" id="Declaring_variables">
+            <header>Declaring variables</header>
+            <p>You can declare a variable in three ways:</p>
+            <p>With the keyword var. For example:</p>
+            <code>var x = 42;</code>
+            <p>This syntax can be used to declare both local and global variables.</p>
+        </section>
+
+        <section class="main-section" id="Variable_scope">
+            <header>Variable scope</header>
+            <p>When you declare a variable outside of any function, it is called a global variable.</p>
+            <p>JavaScript before ECMAScript 2015 does not have block statement scope.</p>
+            <code>if (true) { var x = 5; } console.log(x); // 5</code>
+            <p>This behavior changes when using the let declaration introduced in ECMAScript 2015.</p>
+            <ul>
+                <li>Global scope</li>
+                <li>Local scope</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
