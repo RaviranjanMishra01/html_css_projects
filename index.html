@@ -1,64 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JavaScript Essentials</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f4f4f4;
-      padding: 30px;
-      margin: 0;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #f8fafc;
+            line-height: 1.6;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(160deg, #0f172a, #0a0f1f 80%);
+        }
 
-    h1 {
-      text-align: center;
-      color: #222;
-      margin-bottom: 20px;
-    }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    ul {
-      max-width: 600px;
-      margin: auto;
-      padding: 0;
-      list-style-type: none;
-    }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 60px 0;
+            background: rgba(20,27,45,0.75);
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
 
-    li {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      margin-bottom: 10px;
-      padding: 12px 16px;
-      border-radius: 5px;
-    }
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #3b82f6, #9333ea, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
 
-    a {
-      text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
-    }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.8;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .projects-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #f8fafc;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: rgba(20,27,45,0.75);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.08);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #9333ea);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .project-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #3b82f6, #9333ea);
+            color: white;
+            border-radius: 50%;
+            font-weight: 600;
+            margin-right: 15px;
+            font-size: 0.9rem;
+            box-shadow: 0 0 10px rgba(59,130,246,0.6);
+        }
+
+        .project-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #f8fafc;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .project-title::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -2px;
+            width: 0%; height: 2px;
+            background: #38bdf8;
+            transition: width 0.3s ease;
+        }
+
+        .project-title:hover {
+            color: #38bdf8;
+        }
+
+        .project-title:hover::after {
+            width: 100%;
+        }
+
+        .project-description {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #7dd3fc;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #38bdf8;
+        }
+
+        .project-link i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover i {
+            transform: translateX(5px);
+            text-shadow: 0 0 8px rgba(56,189,248,0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #94a3b8;
+            font-size: 0.95rem;
+            background: rgba(20,27,45,0.75);
+            border-radius: 20px;
+            margin-top: 40px;
+            border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px);
+        }
+
+        footer::before {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, #3b82f6, #9333ea);
+            margin: 0 auto 12px;
+            border-radius: 2px;
+        }
+
+        .decoration {
+            position: fixed;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59,130,246,0.3), transparent);
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .decoration-1 { 
+            width: 320px; 
+            height: 320px; 
+            top: 4%; 
+            right: 8%; 
+        }
+
+        .decoration-2 { 
+            width: 260px; 
+            height: 260px; 
+            bottom: 6%; 
+            left: 10%; 
+            background: radial-gradient(circle, rgba(147,51,234,0.25), transparent); 
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 40px 20px;
+                margin-bottom: 40px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .project-card {
+                padding: 25px;
+            }
+            
+            .decoration {
+                display: none;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <h1>HTML, CSS projects</h1>
-  <ul>
-    <li><a href="01-home-page-master/">01-home-page-master</a></li>
-    <li><a href="02-Raviside-agency-landing/">02-Raviside-agency-landing</a></li>
-    <li><a href="03-simple-home-page/">03-simple-home-page</a></li>
-    <li><a href="04-Digital-banking-page/">04-Digital-banking-page</a></li>
-    <li><a href="05-huddle-landing-page/">05-huddle-landing-page</a></li>
-    <li><a href="06-digitsl-logo/">06-digitsl-logo</a></li>
-    <li><a href="./07-meet-the-brain/">07-meet-the-brain</a></li>
-    <li><a href="./08-socialBentoFolder/">08-socialBentoFolder</a></li>
-  </ul>
-</body>
+    <div class="decoration decoration-1" aria-hidden="true"></div>
+    <div class="decoration decoration-2" aria-hidden="true"></div>
 
+    <div class="container">
+        <header>
+            <h1>HTML & CSS Projects</h1>
+            <p class="subtitle">Explore a curated collection of modern web development projects blending creativity with professional functionality</p>
+        </header>
+
+        <section class="projects-section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">01</div>
+                        <a href="01-home-page-master/" class="project-title">Home Page Master</a>
+                    </div>
+                    <p class="project-description">A comprehensive homepage design with responsive layouts and interactive elements.</p>
+                    <a href="01-home-page-master/" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">02</div>
+                        <a href="02-Raviside-agency-landing/" class="project-title">Raviside Agency Landing</a>
+                    </div>
+                    <p class="project-description">Sleek landing page for a creative agency, featuring parallax scrolling and smooth animations.</p>
+                    <a href="02-Raviside-agency-landing/" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">03</div>
+                        <a href="03-simple-home-page/" class="project-title">Simple Home Page</a>
+                    </div>
+                    <p class="project-description">Minimalist homepage design emphasizing clean typography and intuitive navigation.</p>
+                    <a href="03-simple-home-page/" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">04</div>
+                        <a href="04-Digital-banking-page/" class="project-title">Digital Banking Page</a>
+                    </div>
+                    <p class="project-description">Modern banking interface with secure, user-friendly features and data visualizations.</p>
+                    <a href="04-Digital-banking-page/" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">05</div>
+                        <a href="05-huddle-landing-page/" class="project-title">Huddle Landing Page</a>
+                    </div>
+                    <p class="project-description">Community-focused landing page with collaboration tools and vibrant illustrations.</p>
+                    <a href="05-huddle-landing-page/" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">06</div>
+                        <a href="06-digitsl-logo/" class="project-title">Digital Logo</a>
+                    </div>
+                    <p class="project-description">Creative logo design showcase using CSS animations and scalable vector graphics.</p>
+                    <a href="06-digitsl-logo/" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">07</div>
+                        <a href="./07-meet-the-brain/" class="project-title">Meet The Brain</a>
+                    </div>
+                    <p class="project-description">Interactive page introducing AI concepts with engaging visuals and storytelling.</p>
+                    <a href="./07-meet-the-brain/" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-number">08</div>
+                        <a href="./08-socialBentoFolder/" class="project-title">Social Bento</a>
+                    </div>
+                    <p class="project-description">Bento-style social media dashboard with modular, customizable layouts.</p>
+                    <a href="./08-socialBentoFolder/" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 HTML & CSS Projects | Designed with passion ✨</p>
+        </footer>
+    </div>
+</body>
 </html>
