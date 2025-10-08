@@ -8,6 +8,9 @@ It includes:
 - A **hero section** with buttons and illustrations.
 - Mobile-friendly layout with media queries.
 
+## 🚀 Live Demo
+
+👉 [Click here to view the project](https://raviranjanmishra01.github.io/html_css_projects/03-simple-home-page)
 ## 📸 Preview
 - image1
 ![](./assets/image.png)
@@ -72,6 +75,5 @@ furniture-store/
 
 - Enhance accessibility features for better user experience.
 
-## 👨‍💻 Author
-
-Created by Raviranjan Mishra 🚀
+### 👨‍💻 Author
+Created by ** Raviranjan Mishra ** 🚀
