@@ -2,6 +2,9 @@
 
 - This project is a responsive landing page inspired by Huddle.
 It is built with HTML, CSS, and Font Awesome for icons. The design adapts seamlessly to desktop, tablet, and mobile screen sizes.
+## 🚀 Live Demo
+
+👉 [Click here to view the project](https://raviranjanmishra01.github.io/html_css_projects/05-huddle-landing-page)
 ## 📸 Preview
 
 ### 🖥️ Desktop View  
@@ -46,7 +49,5 @@ It is built with HTML, CSS, and Font Awesome for icons. The design adapts seamle
 - Update colors in style.css to match your branding.
 
 - Add functionality in script.js (currently empty).
-
-# 👨‍💻 Author
-
-> Built by Raviranjan mishra ✨
+### 👨‍💻 Author
+Created by ** Raviranjan kumar ** 🚀
