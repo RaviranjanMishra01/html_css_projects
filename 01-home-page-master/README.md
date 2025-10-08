@@ -1,6 +1,9 @@
 # 🛋️ Furniture Store Website
 
 A user-friendly furniture e-commerce homepage created using HTML, CSS, and JavaScript. This project features a modern landing page with a hero image section, navigation menu, interactive sliders for text and images, and a responsive design that looks great on both desktop and mobile devices.
+## 🚀 Live Demo
+
+👉 [Click here to view the project](https://raviranjanmishra01.github.io/html_css_projects/01-home-page-master)
 ## 📸 Preview
 first picture  
 ![](./assets/Screenshot%202025-09-01%20152322.png)
@@ -12,13 +15,13 @@ first picture
 - 🛋️ About Section: Displays product details with styled text and images.
 - 🎨 Hover Effects: Smooth transitions for navigation and slider controls.
 
-# 🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 HTML5: For the page’s structure.
 CSS3: For layout, styling, and responsive design.
 JavaScript (Vanilla): Powers the hero image slider.
 
-# 📂 Project Structure
+## 📂 Project Structure
 ```js
 textfurniture-store/
 │── index.html         
@@ -28,7 +31,7 @@ textfurniture-store/
 │       ├── images/     
 │       └── favicon/  
 ```  
-# 2️⃣ How to Open
+## 2️⃣ How to Open
 Simply open index.html in your web browser.
 📖 How to Use
 
@@ -43,4 +46,4 @@ Connect to a backend API to show real product data.
 Include a shopping cart and checkout system.
 
 ### 👨‍💻 Author
-Created by ** Raviranjan Mishra ** 🚀
+Created by ** Raviranjan Mishra **  🚀
