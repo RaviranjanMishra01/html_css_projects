@@ -2,7 +2,9 @@
 
 This is a modern, fully responsive **landing page** for a fictional digital banking service — **DigitalBank**.  
 It is built using **HTML, CSS, and Vanilla JavaScript** with a clean and professional design that adapts perfectly to **desktop, tablet, and mobile** screens.
+## 🚀 Live Demo
 
+👉 [Click here to view the project](https://raviranjanmishra01.github.io/html_css_projects/04-Digital-banking-page)
 ### 🖥️ Desktop View  
 ![Desktop Preview](./assets/post/desktop.png)
 
@@ -48,5 +50,5 @@ It is built using **HTML, CSS, and Vanilla JavaScript** with a clean and profess
 
  - Add form submission with backend support
 
-# 👨‍💻 Author
-> Built with ❤️ by Raviranjan Mishra  
+### 👨‍💻 Author
+Created by ** Raviranjan Mishra ** 🚀
