@@ -1,6 +1,9 @@
 # 📋 Project Overview
 This project is a single-page technical documentation website that provides comprehensive information about JavaScript fundamentals. It features a fixed sidebar navigation and responsive design that works on both desktop and mobile devices.
 
+## 🚀 Live Demo
+
+👉 [Click here to view the project](https://raviranjanmishra01.github.io/html_css_projects/09-JS_docs)
 ## ✨ Features
 - Responsive Design: Adapts to desktop and mobile screens
 
