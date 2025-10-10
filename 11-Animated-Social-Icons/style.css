@@ -11,8 +11,9 @@ html {
 body {
     min-height: 100vh;
     width: 100%;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(17deg, rgba(131, 58, 180, 1) 0%, rgba(232, 97, 142, 1) 21%, rgba(184, 129, 138, 1) 31%, rgba(253, 29, 29, 1) 50%, rgba(122, 109, 92, 1) 75%, rgba(103, 140, 52, 1) 89%, rgba(252, 176, 69, 1) 100%);
 }
 
